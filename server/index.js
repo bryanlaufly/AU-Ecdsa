@@ -19,6 +19,8 @@ app.get("/balance/:address", (req, res) => {
 });
 
 app.post("/send", (req, res) => {
+  // TODO : get a signature from the client 
+  // then recover the public key from the signature
   const { sender, recipient, amount } = req.body;
 
   setInitialBalance(sender);
